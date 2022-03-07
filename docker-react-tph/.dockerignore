@@ -1,0 +1,16 @@
+#Dockerfiles
+Dockerfiles
+Dockerfile-dev
+docker-compose.yml
+docker-compose-dev.yml
+.dockerignore
+
+#Development files
+node_modules
+.git
+.gitignore
+
+#Installation error log
+npm-debug.log
+yarn-error.log
+yarn-debug.log

@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+
+  docker-react:
+  container_name: docker-react-tph
+  build:
+      context: ./
+      dockerfile: Dockerfile
+  ports:
+    -"8001:8000"

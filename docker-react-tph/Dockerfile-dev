@@ -1,0 +1,11 @@
+# Node version #17
+FROM node:v16.14.0 
+
+WORKDIR /app
+
+COPY package.json ./
+
+RUN npm install
+RUN install react-script@5.0.0 -g
+
+CMD ["npm", "start"]
