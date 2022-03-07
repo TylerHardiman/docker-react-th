@@ -1,16 +1,17 @@
 # * The Build Environment
-FROM node:v16.14.0 
+FROM node:lts-alpine
 
 WORKDIR /app
 
 COPY package.json ./
 COPY package-lock.json ./
 
-RUN npm ci
-RUN install react-script@5.0.0 -g
+RUN npm install
+RUN install react-scripts@4.0.3 -g
 
 COPY ./ ./
 RUN npm run build
+
 
 # * The Production Environment
 FROM nginx:stable-alpine as prod
