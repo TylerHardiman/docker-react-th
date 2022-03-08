@@ -1,11 +1,11 @@
 # Node version #17
 FROM node:lts-alpine
 
-WORKDIR /app
+WORKDIR /app/docker-react-tph
 
 COPY package.json ./
 
 RUN npm install
-RUN install react-scripts@4.0.3 -g
+RUN reactv17.0.2
 
 CMD ["npm", "start"]

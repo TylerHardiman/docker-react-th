@@ -3,14 +3,14 @@ version: '3.9'
 services:
 
     docker-react-dev:
-        container_name: 394204d45d87
+        container_name: 5b2b8b7a50111ef395bf1c1d5be11e6e167ac018125055daa8b5c2317ae131ab
         build:
             context: .
-            image: 
+            image: 394204d45d87
             dockerfile: Dockerfile-dev
         volumes:
-            - .:/app
-            - '/app/node_modules'
+            - .:/app/docker-react-tph
+            - '/app/docker-react-tph/node_modules'
         ports:
             - '8001:8000'
 
@@ -18,6 +18,6 @@ services:
         container_name: docker_react_test
         image: docker-react-tph_docker-react-dev #test for testing
         volumes:
-            - .:/app
-            - '/app/node_modules'
+            - .:/app/docker-react-tph-test
+            - '/app/docker-react-tph-test/node_modules'
         command: ["npm","run","test",]
